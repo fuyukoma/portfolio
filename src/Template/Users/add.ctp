@@ -1,0 +1,23 @@
+<div class="actions columns large-2 medium-3">
+    <h3><?= __('Actions') ?></h3>
+    <ul class="side-nav">
+        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('List Blogs'), ['controller' => 'Blogs', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Blog'), ['controller' => 'Blogs', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Works'), ['controller' => 'Works', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Work'), ['controller' => 'Works', 'action' => 'add']) ?></li>
+    </ul>
+</div>
+<div class="users form large-10 medium-9 columns">
+    <?= $this->Form->create($user) ?>
+    <fieldset>
+        <legend><?= __('Add User') ?></legend>
+        <?php
+            echo $this->Form->input('username');
+            echo $this->Form->input('password');
+            echo $this->Form->input('role');
+        ?>
+    </fieldset>
+    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->end() ?>
+</div>
