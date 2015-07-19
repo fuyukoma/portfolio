@@ -26,21 +26,27 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('responsive.gs/reset.css') ?>
+    <?= $this->Html->css('responsive.gs/responsive.gs.16col.css') ?>
+    <?= $this->Html->css('style.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <header>
-        <div class="header-title">
-            <span><?= $this->fetch('title') ?></span>
-        </div>
-        <div class="header-help">
-            <span><a target="_blank" href="http://book.cakephp.org/3.0/">Documentation</a></span>
-            <span><a target="_blank" href="http://api.cakephp.org/3.0/">API</a></span>
+        <div class="navbar">
+            <div class="navbar-title">
+                <span><?= $this->fetch('title') ?></span>
+            </div>
+            <div class="navbar-list">
+                <ul>
+                    <li><a>Works</a></li>
+                    <li><a>Blog</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <div id="container">

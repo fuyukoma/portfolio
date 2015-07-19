@@ -1,0 +1,44 @@
+/**
+ * Navbar
+ */
+
+$li-width       : 90px;
+$li-height      : 50px;
+$navbar-height  : $li-height + 16*2;
+
+.navbar {
+    font-family: 'Bitter', self;
+    width: 100%;
+    height: $navbar-height;
+    padding: 16px;
+    @include clearfix;
+
+    &-title {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: $li-height;
+        float:left;
+    }
+
+    &-list {
+        float: right;
+        li {
+            margin: 0 16px;
+            float: left;
+
+            a {
+                color: lighten($primaryColor, 10%);
+                text-align: center;
+                line-height: $li-height;
+                width: $li-width;
+                height: $li-height;
+                @include border-radius(5px);
+                display: inline-block;
+
+                &:hover {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}
